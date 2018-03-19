@@ -80,3 +80,5 @@ genericinstall:
 	make && \
 	sudo make install
 
+shellcheck:
+	shellcheck `grep -ril "/bin/bash" *|grep -Ev "yml|yaml"`
